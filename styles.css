@@ -16,6 +16,8 @@ body {
     flex-wrap: wrap;
 
     margin: 100px;
+    height: 480px;
+    width: 480px;
 
     justify-content: center;
     align-items: center;
@@ -27,5 +29,5 @@ body {
 
     flex: 1 1 30px;
 
-    background-color: black;
+    background-color: white;
 }
