@@ -7,6 +7,11 @@ function createGrid() {
         const cell = document.createElement('div');
         cell.classList.toggle('cell');
         cell.id = i;
+
+        cell.addEventListener('mouseover', () => {
+            cell.classList.toggle('sketched');
+        });
+
         grid.appendChild(cell);
     }
 }

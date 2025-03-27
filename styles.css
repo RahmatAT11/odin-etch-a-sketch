@@ -41,3 +41,7 @@ p {
     flex: 0 0 auto;
     background-color: white;
 }
+
+.sketched {
+    background-color: black;
+}
