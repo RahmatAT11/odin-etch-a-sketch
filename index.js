@@ -15,14 +15,18 @@ function setNewCanvas() {
     });
 }
 
+function generateRandomColor() {
+    const red = Math.random() * 256;
+    const green = Math.random() * 256;
+    const blue = Math.random() * 256;
+
+    return `rgba(${red}, ${green}, ${blue}, 1)`;
+}
+
 function createCanvas(width, height, cellSize = { width: 10, height: 10 }) {
     const grid = document.querySelector('.container');
 
     if (grid.children.length > 0) {
-        // for (let i = 0; i < grid.children.length; i++) {
-        //     grid.removeChild(grid.children[i]);
-        //     console.log('removed');
-        // }
         grid.innerHTML = '';
     }
 
@@ -35,7 +39,7 @@ function createCanvas(width, height, cellSize = { width: 10, height: 10 }) {
         cell.id = i;
 
         cell.addEventListener('mouseover', () => {
-            cell.classList.add('sketched');
+            cell.style.backgroundColor = generateRandomColor();
         });
 
         grid.appendChild(cell);
