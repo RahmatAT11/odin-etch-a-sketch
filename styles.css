@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: wrap;
+
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0 auto;
+
+    width: 40rem;
+    height: 40rem;
+}
