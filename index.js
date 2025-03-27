@@ -1,8 +1,30 @@
-function createGrid() {
+function setNewCanvas() {
+    const newCanvas = document.querySelector('#new-canvas');
+    newCanvas.addEventListener('click', () => {
+        let isSizeValid = false;
+        let size = 0;
+
+        size = Number.parseInt(prompt('Enter the size of the new canvas (in px): '));
+        isSizeValid = size <= 100 && size > 0;
+
+        if (isSizeValid) {
+            createCanvas(size, size);   
+        } else {
+            alert('Invalid size. Please enter a number between 1 and 100.');
+        }
+    });
+}
+
+function createCanvas(width, height, cellSize = { width: 10, height: 10 }) {
     const grid = document.querySelector('.container');
-    const width = 16;
-    const height = 16;
-    const cellSize = { width: 20, height: 20 };
+
+    if (grid.children.length > 0) {
+        // for (let i = 0; i < grid.children.length; i++) {
+        //     grid.removeChild(grid.children[i]);
+        //     console.log('removed');
+        // }
+        grid.innerHTML = '';
+    }
 
     for (let i = 0; i < width * height; i++) {
         const cell = document.createElement('div');
@@ -23,4 +45,5 @@ function createGrid() {
     grid.style.maxHeight = 'auto';
 }
 
-createGrid();
+createCanvas(16, 16);
+setNewCanvas();
