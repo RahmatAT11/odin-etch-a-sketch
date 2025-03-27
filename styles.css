@@ -30,14 +30,9 @@ p {
 
     border: 1px solid black;
     margin: 0 auto;
-
-    max-width: 802px;
-    max-height: auto;
 }
 
 .cell {
-    width: 50px;
-    height: 50px;
     flex: 0 0 auto;
     background-color: white;
 }
